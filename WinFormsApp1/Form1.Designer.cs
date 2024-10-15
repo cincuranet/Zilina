@@ -29,23 +29,35 @@
         private void InitializeComponent()
         {
             button1 = new Button();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(291, 75);
+            button1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            button1.Location = new Point(12, 12);
             button1.Name = "button1";
-            button1.Size = new Size(274, 196);
+            button1.Size = new Size(776, 96);
             button1.TabIndex = 0;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Location = new Point(12, 114);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(776, 324);
+            flowLayoutPanel1.TabIndex = 1;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
@@ -55,5 +67,6 @@
         #endregion
 
         private Button button1;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }
