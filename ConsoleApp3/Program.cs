@@ -17,6 +17,7 @@ internal class Program
         //await sem.WaitAsync();
         var bl = new BlockingCollection<int>();
         bl.GetConsumingEnumerable();
+        new Lazy<int>(, LazyThreadSafetyMode.ExecutionAndPublication)
         for (var i = 0; i < 3; i++)
         {
             ThreadPool.QueueUserWorkItem(o =>
